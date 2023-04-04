@@ -34,7 +34,7 @@ const Weather = () => {
   }
 
   return (
-    <div>
+    <div className="weather-container">
       <h2>Current Weather in {city}</h2>
       <p>Temperature: {weather.main.temp} °C</p>
       <p>Humidity: {weather.main.humidity} %</p>

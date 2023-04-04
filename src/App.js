@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductList from "./components/ProductList";
 import ProductDetails from "./components/ProductDetails";
 import Weather from "./components/Weather";
+import "./App.css";
 
 function App() {
   const [products, setProducts] = useState([

@@ -1,38 +1,87 @@
 .App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
   text-align: center;
+  color: #4a4a4a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #e1e1e1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+th {
+  background-color: #f6f6f6;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  padding: 8px 12px;
+  margin-right: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: #0069d9;
+}
+
+.notification {
+  padding: 15px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+}
+
+form input[type="submit"] {
+  margin-top: 10px;
+}
+
+.weather-container {
+  background-color: #f0f8ff;
+  padding: 15px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.weather-container h2 {
+  margin: 0 0 10px 0;
+}
+
+.weather-container p {
+  margin: 5px 0;
 }
