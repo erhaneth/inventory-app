@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import ProductForm from "./ProductForm";
 import Notification from "./Notification";
 
@@ -56,6 +57,9 @@ const ProductList = () => {
           {products.map((product) => (
             <tr key={product.id}>
               <td>{product.id}</td>
+              <td>
+                <Link to={`/product/${product.id}`}>{product.name}</Link>
+              </td>
               <td>{product.name}</td>
               <td>{product.quantity}</td>
               <td>
