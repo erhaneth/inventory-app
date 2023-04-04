@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductList from "./components/ProductList";
 import ProductDetails from "./components/ProductDetails";
+import Weather from "./components/Weather";
 
 function App() {
   const [products, setProducts] = useState([
@@ -14,6 +15,7 @@ function App() {
     <Router>
       <div className="App">
         <h1>Inventory Management App</h1>
+        <Weather />
         <Routes>
           <Route
             path="/"
