@@ -17,6 +17,9 @@ const ProductList = () => {
     // Add the new product to the list
     setProducts([...products, { id: newId, ...newProduct }]);
   };
+  const removeProduct = (id) => {
+    setProducts(products.filter((product) => product.id !== id));
+  };
   const increaseQuantity = (id) => {
     setProducts(
       products.map((product) =>
@@ -68,6 +71,9 @@ const ProductList = () => {
                 </button>
                 <button onClick={() => decreaseQuantity(product.id)}>
                   Decrease
+                </button>
+                <button onClick={() => removeProduct(product.id)}>
+                  Remove
                 </button>
               </td>
             </tr>
