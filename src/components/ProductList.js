@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProductForm from "./ProductForm";
+import Notification from "./Notification";
 
 const ProductList = () => {
   const [products, setProducts] = useState([
@@ -7,6 +8,7 @@ const ProductList = () => {
     { id: 2, name: "Milk", quantity: 8 },
     // Initial products
   ]);
+  const [notification, setNotification] = useState("");
 
   const addProduct = (newProduct) => {
     // Generate a new ID for the new product
@@ -25,11 +27,16 @@ const ProductList = () => {
   };
   const decreaseQuantity = (id) => {
     setProducts(
-      products.map((product) =>
-        product.id === id && product.quantity > 0
-          ? { ...product, quantity: product.quantity - 1 }
-          : product
-      )
+      products.map((product) => {
+        if (product.id === id && product.quantity > 0) {
+          const newQuantity = product.quantity - 1;
+          if (newQuantity === 0) {
+            setNotification(`Product "${product.name}" is out of stock.`);
+          }
+          return { ...product, quantity: newQuantity };
+        }
+        return product;
+      })
     );
   };
 
@@ -64,6 +71,7 @@ const ProductList = () => {
         </tbody>
       </table>
       <ProductForm addProduct={addProduct} />
+      <Notification message={notification} />
     </div>
   );
 };
