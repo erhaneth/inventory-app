@@ -5,7 +5,7 @@ const Weather = () => {
   const [isLoading, setIsLoading] = useState(true);
   const apiKey = process.env.REACT_APP_WEATHER_API_KEY; // Replace with your OpenWeatherMap API key
   const city = "New York";
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&cnt=5`;
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -29,16 +29,21 @@ const Weather = () => {
     return <div>Loading weather data...</div>;
   }
 
-  if (!weather) {
+  if (!weather || !weather.list) {
     return <div>Failed to fetch weather data.</div>;
   }
 
   return (
     <div className="weather-container">
-      <h2>Current Weather in {city}</h2>
-      <p>Temperature: {weather.main.temp} °C</p>
-      <p>Humidity: {weather.main.humidity} %</p>
-      <p>Description: {weather.weather[0].description}</p>
+      <h2>5-Day Weather Forecast in {city}</h2>
+      {weather.list.map((forecast, index) => (
+        <div key={index} className="weather-item">
+          <h3>{new Date(forecast.dt * 1000).toLocaleDateString()}</h3>
+          <p>Temperature: {forecast.main.temp} °C</p>
+          <p>Humidity: {forecast.main.humidity} %</p>
+          <p>Description: {forecast.weather[0].description}</p>
+        </div>
+      ))}
     </div>
   );
 };

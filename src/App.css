@@ -1,5 +1,5 @@
 .App {
-  font-family: Arial, sans-serif;
+  font-family: Roboto, sans-serif;
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
@@ -30,7 +30,7 @@ th {
 button {
   padding: 8px 12px;
   margin-right: 5px;
-  background-color: #007bff;
+  background-color: #cc0000;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -38,7 +38,7 @@ button {
 }
 
 button:hover {
-  background-color: #0069d9;
+  background-color: #a70000;
 }
 
 .notification {
@@ -76,12 +76,47 @@ form input[type="submit"] {
   padding: 15px;
   border-radius: 3px;
   margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.weather-item {
+  flex: 0 0 calc(20% - 10px);
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .weather-container h2 {
   margin: 0 0 10px 0;
+  width: 100%;
 }
 
 .weather-container p {
   margin: 5px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .weather-item {
+    flex: 0 0 calc(33.33% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .weather-item {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-item {
+    flex: 0 0 100%;
+  }
 }
