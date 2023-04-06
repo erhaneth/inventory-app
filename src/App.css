@@ -72,7 +72,7 @@ form input[type="submit"] {
 }
 
 .weather-container {
-  background-color: #f0f8ff;
+  background-image: url("/public/background.jpg");
   padding: 15px;
   border-radius: 3px;
   margin-bottom: 20px;
