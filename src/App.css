@@ -3,6 +3,7 @@
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
+  background-color: #e3e3e3d3;
 }
 
 h1 {
@@ -83,7 +84,7 @@ form input[type="submit"] {
 
 .weather-item {
   flex: 0 0 calc(20% - 10px);
-  background-color: #ffffff;
+  background-color: #e3e3e3d3;
   padding: 10px;
   border-radius: 3px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -96,6 +97,8 @@ form input[type="submit"] {
 .weather-container h2 {
   margin: 0 0 10px 0;
   width: 100%;
+  color: #ffffff;
+  text-align: center;
 }
 
 .weather-container p {
