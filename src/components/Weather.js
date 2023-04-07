@@ -42,6 +42,10 @@ const Weather = () => {
           <p>Temperature: {forecast.main.temp} °C</p>
           <p>Humidity: {forecast.main.humidity} %</p>
           <p>Description: {forecast.weather[0].description}</p>
+          <img
+            src={`http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`}
+            alt={forecast.weather[0].description}
+          />
         </div>
       ))}
     </div>

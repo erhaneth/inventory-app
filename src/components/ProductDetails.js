@@ -24,6 +24,7 @@ const ProductDetails = ({ products }) => {
       <p>ID: {product.id}</p>
       <p>Name: {product.name}</p>
       <p>Quantity: {product.quantity}</p>
+      <p>Timestamp: {product.timestamp}</p>
       <button onClick={handleBack}>Back to Product List</button>
     </div>
   );
