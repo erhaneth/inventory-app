@@ -2,6 +2,12 @@
 
 This is an inventory management app built with React. The app allows users to keep track of an inventory of products, manage product quantities, and view weather information. The app demonstrates various features such as routing, state management, and fetching data from external APIs.
 
+## Live Site
+
+The live version of the app is hosted on Vercel and can be accessed at the following link:
+
+[https://inventory-app-erhaneth.vercel.app/](https://inventory-app-erhaneth.vercel.app/)
+
 ## Features
 
 - Keep track of multiple products
