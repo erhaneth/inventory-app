@@ -8,8 +8,9 @@ import "./App.css";
 function App() {
   const [products, setProducts] = useState([
     { id: 1, name: "Yogurt", quantity: 10 },
-    { id: 2, name: "<ilk>", quantity: 8 },
-    // Initial products
+    { id: 2, name: "Milk", quantity: 8 },
+    { id: 3, name: "Cheese", quantity: 43 },
+    { id: 4, name: "Apricot", quantity: 21 }
   ]);
 
   return (
